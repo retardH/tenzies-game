@@ -1,10 +1,13 @@
+const Die = ({ number, isHeld, holdDice }) => {
+  const styles = {
+    backgroundColor: isHeld ? "#59E391" : "white",
+  };
 
-const Die = ({number}) => {
-    return ( 
-        <div className="die">
-            {number}
-        </div>
-     );
-}
- 
+  return (
+    <div className="die" style={styles} onClick={holdDice}>
+      {number}
+    </div>
+  );
+};
+
 export default Die;
